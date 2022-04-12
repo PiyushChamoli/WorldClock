@@ -14,7 +14,7 @@ class Stopwatch extends Component {
       timerStart: Date.now() - this.state.timerTime,
     });
     this.timer = setInterval(() => {
-      console.log(`Time is 🕗 ${Date.now() - this.state.timerStart}`);
+      console.log(`Time is 🚀 ${Date.now() - this.state.timerStart}`);
       this.setState({
         timerTime: Date.now() - this.state.timerStart,
       });
@@ -27,6 +27,7 @@ class Stopwatch extends Component {
   };
 
   componentWillUnmount() {
+    console.log("unmounted");
     clearInterval(this.timer);
   }
 

@@ -135,7 +135,7 @@ table {
   padding: 0;
   box-sizing: border-box;
 }
-body {
+.App {
   text-align: center;
   font-family: "Roboto", sans-serif;
   background-color: rgb(34, 34, 34);
@@ -160,6 +160,18 @@ body {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 900px) {
+  .Timers {
+    flex-direction: column;
+
+    align-items: center;
+  }
+}
+@media (max-width: 900px) {
+  .Stopwatch {
+    margin-bottom: 40px;
+  }
+}
 .Countdown,
 .Stopwatch {
   margin-left: 30px;
@@ -170,6 +182,9 @@ body {
   width: 400px;
   background-color: rgb(22, 27, 31);
   box-shadow: 0 3px 6px rgb(12, 12, 12);
+}
+.Countdown,
+.Stopwatch {
   padding-top: 10px;
   position: relative;
 }
@@ -201,6 +216,8 @@ button:hover {
   padding: 40px 0;
   font-size: 48px;
 }
+/* .Stopwatch-text {
+} */
 .Countdown-display {
   margin-top: 5px;
   margin-bottom: 20px;
@@ -211,6 +228,7 @@ button:hover {
   border-radius: 2px;
   padding: 4px 16px;
   color: #ffffff;
+
   font-size: 16px;
 }
 .Countdown-display button:hover {

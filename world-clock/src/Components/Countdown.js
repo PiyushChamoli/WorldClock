@@ -15,7 +15,7 @@ class Countdown extends Component {
     });
     this.timer = setInterval(() => {
       const newTime = this.state.timerTime - 10;
-      console.log(`Time left is 🕗 ${newTime}`);
+      console.log(`Time left is 🚀 ${newTime}`);
       if (newTime >= 0) {
         this.setState({
           timerTime: newTime,
@@ -35,7 +35,7 @@ class Countdown extends Component {
   resetTimer = () => {
     if (this.state.timerOn === false) {
       this.setState({
-        timerTime: 0,
+        timerTime: this.state.timerStart,
       });
     }
   };
